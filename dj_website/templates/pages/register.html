@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Register</title>
+{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    Title:
+    <select name="title">
+        <option value="mr">Mr.</option>
+        <option value="mr">Mrs.</option>
+    </select><br><br>
+    Name: <input type="text" id="name" name="name"><br><br>
+    Email: <input type="email" id="mail" name="mail"><br><br>
+    Phone: <input type="tel" id="ph" name="ph"><br><br>
+    <input type="radio" id="male" name="radio" value="Male">Male
+    <input type="radio" id="female" name="radio" value="Female">Female<br><br>
+    Skills:
+    <input type="checkbox" id="java" name="skills" value="Java">Java &nbsp;
+    <input type="checkbox" id="python" name="skills" value="Python">Python &nbsp;
+    <input type="checkbox" id="SQL" name="skills" value="SQL">SQL &nbsp;<br><br>
+    Photo: <input type="file" id="photo" name="photo"><br><br>
+
+    <input type="submit" value="Register" id="btn">
+</form>
+{% endblock  %}
+
+

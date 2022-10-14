@@ -1,0 +1,20 @@
+{%load static%}
+<html>
+<head>
+<title>Application</title>
+</head>
+<body>
+    <h1>Sriyog Dixit</h1>
+    <h3>Associate Software Engineer</h3>
+    Skills:
+    <ol>
+    {%for s in skills%}
+    <li>
+        {{s}}
+    </li>
+    {%endfor%}
+    <h1><a href="{% url 'grt' a=10 b=20 %}">GRT</a></h1>
+    <img src="{static/images/download.png}">
+    </ol>
+</body>
+</html>
